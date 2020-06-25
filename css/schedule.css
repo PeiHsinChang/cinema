@@ -1,0 +1,100 @@
+div.schedule_content {
+  width: 100%;
+}
+
+div.schedule_content div.schedule {
+  display: flex;
+  width: 100%;
+  padding-bottom: 20px;
+  justify-content: space-around;
+  /*margin-bottom: 20px;*/
+}
+
+div.schedule_content div.schedule div.schedule_left {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.schedule_content div.schedule div.schedule_right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.schedule_content div.schedule div.schedule_right div.sub_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+div.schedule_content div.schedule div.schedule_right div.time_table {
+  margin-top: 10px;
+  font-size: 18px;
+  display: flex;
+  align-self: center;
+}
+
+div.schedule_content div.schedule div.schedule_right div.time_table table tr th, div.schedule_content div.schedule div.schedule_right div.time_table td {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+div.schedule_content .blue {
+  background-color: #082567;
+  color: white;
+}
+
+div.schedule_content .white {
+  background-color: white;
+  color: #082567;
+}
+
+@media (min-width: 375px) and (max-width: 950px) {
+  div.schedule_content div.schedule {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  div.schedule_content div.schedule div.schedule_left {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  div.schedule_content div.schedule div.schedule_left div.postimg {
+    min-width: 200px;
+  }
+  div.schedule_content div.schedule div.schedule_right {
+    width: 98%;
+    display: flex;
+    margin: 0 auto;
+  }
+  div.schedule_content div.schedule div.schedule_right h2 {
+    text-align: center;
+  }
+  div.schedule_content div.schedule div.schedule_right div.sub_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  div.schedule_content div.schedule div.schedule_right div.sub_content h3 {
+    font-size: 18px;
+  }
+  div.schedule_content div.schedule div.schedule_right div.sub_content div.movieinfo_b {
+    align-self: center;
+  }
+  div.schedule_content div.schedule div.schedule_right div.time_table {
+    width: 90%;
+    overflow-x: auto;
+  }
+  div.schedule_content div.schedule div.schedule_right div.time_table table tr th, div.schedule_content div.schedule div.schedule_right div.time_table td {
+    min-width: 100px;
+  }
+}
+/*# sourceMappingURL=schedule.css.map */

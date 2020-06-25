@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>場地租借</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/activity.css">
+	<link rel="stylesheet" href="./css/hamburger.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./js/hamburger.js"></script>
+</head>
+<body>
+<div class="main_body">
+<div class="sub_body">
+<header class="header">
+  <nav id="navbar" class="sticky">
+    <div class="nav">
+      <div class="nav_left"><a href="index.html"><img class="logo" src="./img/logo/logo_1.png" alt="回到首頁"></a></div>
+    <div class="nav_right">
+			<button class="hamburger hamburger--collapse " type="button">
+				<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+				</span>
+			</button>
+      <ul>
+        <li><a href="ticket.html">購票系統</a></li>
+        <li><a href="movies.html">電影</a></li>
+        <li><a href="schedule.html">場次查詢</a></li>
+        <li><a href="information.html">相關資訊</a></li>
+        <li><a class="localhtml" href="activity.html">展場租借</a></li>
+      </ul>
+    </div>
+		</div>
+		<div id="panel">		
+			<a href="ticket.html">購票系統</a>
+			<a href="movies.html">電影</a>
+			<a href="schedule.html">場次查詢</a>
+			<a href="information.html">相關資訊</a>
+			<a href="activity.html">展場租借</a>
+		</div>
+  </nav>
+</header>
+
+<main>
+<div class="title"><h1>展場租借</h1></div>
+<div class="activity">
+  <div class="item link-right">
+  	<h2>申請表單</h2>
+  	<form action="#" method="get">
+			<div class="form">
+				<div class="formgap">
+					<label><span class="titleforrent">租借人</span><input type="text" name="name" placeholder="請輸入名字"></label>
+				</div>
+				<div class="formgap">
+					<label><span class="titleforrent">E-mail</span><input type="text" name="name" placeholder="請輸入電子郵件"></label>
+				</div>
+				<div class="formgap">
+					<label><span class="titleforrent">場地租借類型</span>
+					<select name="space_type" onchange="document.getElementById('preview').src = this.value">
+					<option value="none">選擇場地</option>
+					<option value="./img/spaces/space1.jpg">劇場一號空間</option>
+					<option value="./img/spaces/space2.jpg">劇場二號空間</option>
+					<option value="./img/spaces/space3.jpg">劇場三號空間</option>
+					<option value="./img/spaces/space4.jpg">劇場四號空間</option>
+					<option value="./img/spaces/space5.jpg">劇場五號空間</option>
+					</select>
+					</label>
+				</div>
+				<div class="formgap">
+					<label><span class="titleforrent">租借日期</span><input type="text" name="name" placeholder="DD/MM/YYYY"></label>
+				</div>
+				<div class="formgap">
+					<span class="titleforrent">租借時段</span>
+					<label class="container">早上
+					<input type="radio" checked="checked" name="radio">
+					<span class="checkmark"></span>
+					</label>
+					<label class="container">下午
+					<input type="radio" name="radio">
+					<span class="checkmark"></span>
+					</label>
+					<label class="container">晚上
+					<input type="radio" name="radio">
+					<span class="checkmark"></span>
+					</label>
+				</div>
+				<div class="formgap">
+					<label><span class="titleforrent">備註說明</span><textarea name="content" rows="5"  placeholder="請輸入文字"></textarea></label>
+				</div>
+			</div>
+    	
+    	<div class="button_position">
+      	<button class="button_type2" type="submit">資料清空</button>
+      	<button class="button_type2" type="submit">送出</button>
+    	</div>
+  	</form>
+	</div>
+
+  <div class="item">
+      <h2>空間照片</h2>
+        <div class="divforspace">
+					<img id="preview"></div>
+        <div class="pricetable">
+          <table>
+          <tr>
+            <td>租任費用/時間<br>(含進場)</td>
+            <td>平日上午/下午<br>09.00-12.00<br>14.00-17.00</td>
+            <td>平日晚上<br>(不含周五)<br>18.00-21.00</td>
+            <td>假日白天/下午<br>(含周五晚上)</td>
+          </tr>
+          <tr>
+            <td>每一時段租費<br>(3小時)</td>
+            <td>2100元</td>
+            <td>2700元</td>
+            <td>3000元</td>
+          </tr>
+          <tr>
+            <td>每加1小時</td>
+            <td>700元</td>
+            <td>900元</td>
+            <td>1000元</td>
+          </tr>
+          <tr>
+            <td>保證金</td>
+            <td colspan="3">租借當天收取1000元,結束恢復原場地後歸還。</td>
+          </tr>
+        </table>
+        </div>
+  </div>
+
+</div>
+
+
+</div>
+<footer class="footer_bg">
+	<div class="footer">
+		<div class="footer_col ">
+			<span>FOLLOW US</span>
+			<div class="icon_img">
+			<img src="./img/icon/fb.png" alt="facebook">
+			<img src="./img/icon/ig.png" alt="instagram">
+			<img src="./img/icon/google.png" alt="google">
+			<img src="./img/icon/youtube.png" alt="youtube">
+			</div>
+		</div>
+		<div class="footer_col subscribe">
+			<span>SUBSCRIBE TO NEWSLETTER</span>
+			<input type="email" id="email" name="email" placeholder="Email Address">
+			<button class="button_type2">訂閱</button>
+		</div>
+	</div>
+	<img class="logo" src="./img/logo/logo_2.png" alt="">
+	<p class="footer_p">Copyright © 2020 桐畫劇場 all rights reserved</p>
+</footer>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/*--Radio Button--*/
+.container {
+  /*display: inline-block;*/
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #082567;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/*--Radio_Button_END--*/
+
+label, input {
+  display: inline-block;
+}
+
+div.activity {
+  display: flex;
+  width: 100%;
+}
+
+div.activity div.item {
+  padding: 20px;
+  flex: 1 2 100%;
+}
+
+div.activity div.item h2 {
+  text-align: center;
+}
+
+div.activity div.item form {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+div.activity div.item form div.form {
+  display: flex;
+  flex-direction: column;
+}
+
+div.activity div.item form div.form div.formgap {
+  margin: 5px;
+  display: inline-flex;
+  align-self: center;
+  width: 300px;
+}
+
+div.activity div.item form div.form div.formgap span.titleforrent {
+  font-size: 18px;
+  height: 40px;
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+}
+
+div.activity div.item form div.form div.formgap span + input {
+  height: 40px;
+  width: 300px;
+  align-self: center;
+}
+
+div.activity div.item form div.form div.formgap label select {
+  width: 300px;
+  height: 50px;
+}
+
+div.activity div.item form div.form div.formgap label textarea {
+  width: 300px;
+  resize: none;
+}
+
+div.activity div.item div.divforspace {
+  width: 95%;
+  margin: 0 auto;
+}
+
+div.activity div.item div.divforspace img {
+  width: 100%;
+}
+
+div.activity div.item div.pricetable {
+  width: 95%;
+  margin: 0 auto;
+}
+
+div.activity div.item div.pricetable table {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+div.activity div.item div.pricetable table tr td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+div.activity div.item div.button_position {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 375px) and (max-width: 950px) {
+  div.activity {
+    flex-direction: column;
+  }
+  div.activity div.item {
+    padding: 0px;
+  }
+  div.activity div.item form {
+    width: 80%;
+  }
+  div.activity div.item form div.form div.formgap label span + input {
+    width: 100%;
+  }
+  div.activity div.item form div.form div.formgap label textarea {
+    width: 100%;
+  }
+  div.activity .link-right {
+    border-right: none;
+  }
+}
+/*# sourceMappingURL=activity.css.map */

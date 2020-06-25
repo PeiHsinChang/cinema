@@ -1,0 +1,110 @@
+div.sub_nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+div.sub_nav h3 {
+  width: 150px;
+  text-align: center;
+}
+
+div.movie_wall_hot {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  background: white;
+}
+
+div.movie_wall_hot div.movie_div {
+  margin: 0 auto;
+  padding: 10px;
+  width: 90%;
+  height: 550px;
+  border: 1px solid #b5b5b5;
+  box-shadow: 5px 5px 5px #c3c3c3;
+  text-align: center;
+}
+
+div.movie_wall_hot div.movie_div div.postimg {
+  margin: 10px auto;
+}
+
+div.movie_wall_hot div.movie_div div.subtitle {
+  font-size: 14px;
+  color: #999;
+}
+
+div.movie_wall_hot div.movie_div div.content {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+  width: 95%;
+  text-align: left;
+}
+
+div.movie_wall_coming {
+  margin: 40px;
+}
+
+div.movie_wall_coming div.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+div.movie_wall_coming div.row div.column {
+  flex: 24%;
+  max-width: 24%;
+  padding: 0 4px;
+  flex-direction: column;
+  justify-content: space-around;
+  /* border: 1px solid red; */
+}
+
+div.movie_wall_coming div.row div.column div.r {
+  position: relative;
+}
+
+div.movie_wall_coming div.row div.column div.r img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+div.movie_wall_coming div.row div.column div.r .overlay {
+  box-sizing: border-box;
+  position: absolute;
+  top: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  opacity: 1;
+}
+
+@media (min-width: 375px) and (max-width: 950px) {
+  div.movie_wall_hot div.movie_div title h3 {
+    font-size: 18px;
+  }
+  div.movie_wall_coming div.row {
+    align-items: baseline;
+  }
+  div.movie_wall_coming div.row div.column {
+    flex: 45%;
+    max-width: 45%;
+  }
+  div.movie_wall_coming div.row div.column div.r .overlay {
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+/*# sourceMappingURL=movies.css.map */

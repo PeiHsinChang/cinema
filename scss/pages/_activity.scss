@@ -1,0 +1,103 @@
+@import "../components/btn";
+label ,input {
+  display: inline-block;
+}
+div.activity {
+  display: flex;
+  width:100%;
+  div.item {
+    padding: 20px;
+    flex: 1 2 100%;
+    h2 {
+      text-align:center;
+    }
+    form {
+      margin: 0 auto;   
+      padding:10px;
+      div.form{
+        display: flex;
+        flex-direction: column;
+        div.formgap {
+          margin: 5px;
+          display: inline-flex;
+          align-self: center;
+          width: 300px;
+          span.titleforrent {
+            font-size: 18px;
+            height: 40px;
+            display: inline-block;
+            width: 120px;
+            vertical-align: top;
+          }
+          span + input {
+            height: 40px;
+            width:300px;
+            align-self: center;
+          }
+          label {
+            select {
+              width: 300px;
+              height: 50px;
+            }
+            textarea {
+              width: 300px;
+              resize: none;
+            }
+          }
+        }
+      }   
+    }
+    div.divforspace {
+      width:95%;
+      margin: 0 auto;
+      img {
+        width:100%;
+      }
+    }
+    div.pricetable {
+      width: 95%;
+      margin: 0 auto;
+      table {
+        border-collapse:collapse;
+        margin: 20px auto;
+        tr td {
+          border: 1px solid black;
+          padding: 10px;
+          text-align: center;
+        }
+      }
+    }
+    div.button_position {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 950px) {
+  div.activity {
+    flex-direction: column;
+    div.item {
+      padding: 0px;
+      form {
+        width:80%;
+        div.form {
+          div.formgap {
+            label {
+              span + input {
+                width:100%;
+              }
+              textarea {
+                width:100%;
+              }
+            }
+          }
+        }       
+      }
+    }
+    .link-right {
+      border-right: none;
+    };
+  }
+  
+} 

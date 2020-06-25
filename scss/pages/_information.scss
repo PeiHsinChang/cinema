@@ -1,0 +1,119 @@
+iframe {
+  width: 100%;
+}
+div.sub_nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  h3 {
+    width: 150px;
+    text-align: center;
+  }
+}
+h3.subtitle {
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 80px;
+}
+div.info_news {
+  display: felx;
+  flex-direction: row;
+  width: 70%;
+  margin: 0 auto;
+  div.info_news_title {
+    display: flex;
+    flex-direction: column;
+    color: #757575;
+    .collapsible {
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      cursor: pointer;
+      width: 100%;
+      outline: none; 
+      div.time {
+        width: 70px;
+      }     
+    }
+    .collapsible > div:nth-child(2) {
+      padding-left: 10px;
+      line-height: 25px;
+      width: calc(100% - 70px);
+      text-align: left;
+    }
+    .active, .collapsible:hover {
+      background-color: rgb(0, 88, 88);
+      color:#fff;
+    }
+    .content {
+      line-height: 30px;
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+      p {
+        line-height: 30px;
+        margin: 0 auto;
+        width: 80%;
+      }
+    }
+  }
+}
+div.store_info {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px auto;
+  div.store_info_left {
+    margin: 0;
+    width:20%;
+  }
+  div.store_info_center {
+    width:30%;
+    position: relative;
+    left: 100px;
+    clip-path: polygon(0 0, 100% 0%, 70% 100%, 0% 100%);
+    margin: 0;
+  }
+  div.store_info_right {
+    width: 30%;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    margin: 0;
+    img {
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 950px) {
+  div.store_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    div.store_info_left {
+      margin: 0;
+      width:100%;
+      margin: 0 auto; 
+      text-align: center;
+    }
+    div.store_info_center {
+      width: 70%;
+      clip-path:polygon(0 0px, 0 500px, 700px 700px, 700px 0);
+      position: static;
+      margin: 10px auto;
+    }
+    div.store_info_right {
+      width: 70%;
+      clip-path:polygon(0 0px, 0 500px, 700px 700px, 700px 0);
+      margin: 10px auto;
+      img {
+        width: 100%; 
+      }
+    }
+  }
+} 

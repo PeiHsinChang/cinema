@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+  <link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/ticket.css">
+	<!-- <link rel="stylesheet" href="./css/style.css"> -->
+	<link rel="stylesheet" href="./css/hamburger.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./js/hamburger.js"></script>
+	<script src="./js/select.js"></script> 
+
+
+	<title>購票系統</title>
+</head>
+<body>
+<div class="main_body">
+<div class="sub_body">
+<header class="header">
+	<nav id="navbar" class="sticky">
+		<div class="nav">
+			<div class="nav_left"><a href="index.html"><img class="logo" src="./img/logo/logo_1.png" alt="回到首頁"></a></div>
+	  <div class="nav_right">
+			<button class="hamburger hamburger--collapse"  type="button">
+				<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+				</span>
+			</button>	
+	  	<ul>
+	  		<li><a class="localhtml" href="ticket.html">購票系統</a></li>
+	      <li><a href="movies.html">電影</a></li>
+	      <li><a href="schedule.html">場次查詢</a></li>
+	      <li><a href="information.html">相關資訊</a></li>
+	      <li><a href="activity.html">展場租借</a></li>
+	  	</ul>
+	  </div>
+		</div>
+		<div id="panel">		
+			<a href="ticket.html">購票系統</a>
+			<a href="movies.html">電影</a>
+			<a href="schedule.html">場次查詢</a>
+			<a href="information.html">相關資訊</a>
+			<a href="activity.html">展場租借</a>
+		</div>
+	</nav>
+	
+</header>
+
+<main>
+<div class="title"><h1>購票系統</h1></div>
+<div class="ticket_system">
+	<div class="movietitle col">
+		<h3>選擇電影</h3>
+		<div class="m_title ulstyle">
+			<div class="m_focus">小魔花</div>
+			<div class="m_focus">火口的二人</div>
+			<div class="m_focus">刺激1995</div>
+			<div class="m_focus">馬丁伊登</div>
+			<div class="m_focus">無聲救援</div>
+			<div class="m_focus">碧海藍天-早安!周日經典電影院</div>
+			<div class="m_focus">導演先生的完美假期</div>
+		</div>
+
+	</div>
+	<div class="timeofmovie col">
+		<h3>放映時間</h3>
+		<div class="ulstyle">
+			<div class="accordionItem closed">
+				<div class="accordionItemHeading">4月6日星期一</div>	
+				<div class="accordionItemContent"><div class="time_cell">19.46</div></div>			
+			</div>
+
+			<div  class="accordionItem closed">
+				<div class="accordionItemHeading">4月7日星期二</div>	
+				<div class="accordionItemContent"><div class="time_cell">14.40</div><div class="time_cell">17.10</div></div>
+			</div>
+
+			<div class="accordionItem closed">
+				<div class="accordionItemHeading">4月8日星期三</div>	
+				<div class="accordionItemContent"><div class="time_cell">17.00</div><div class="time_cell">19.50</div></div>
+			</div>
+			<div class="accordionItem closed">
+				<div class="accordionItemHeading">4月9日星期四</div>	
+				<div class="accordionItemContent"><div class="time_cell">14.50</div><div class="time_cell">17.20</div></div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="check col">
+		<h3>訂票確認</h3>
+		<div class="section watchmovie">
+			<div>電影</div>
+			<div id="m_title"></div>
+		</div>
+		<div class="section watchdate">
+			<div>日期</div>
+			<div id="m_day"></div>
+		</div>
+		<div class="section watchtime">
+			<div>放映時間</div>
+			<div id="m_time"></div>
+		</div>
+
+		<div class="payment">
+			<span>請選擇您要購買的張數以及票種，系統會自動選擇最好的座位。<br>
+				每筆交易最多可以購買6張。<br>
+				點此查看<div id='open_modal'>購票規則</div></span>
+			<table>
+				<tr>
+					<td>票種</td>
+					<td>數量</td>
+					<td>價格</td>
+					<td>小計</td>
+				</tr>
+				<tr>
+					<td>全票</td>
+					<td>
+						<div id="adult" class="custom-select">
+							<select >
+								<option value="0">0</option>
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+					</td>
+					<td>290</td>
+					<td id="t_adult">0</td>
+				</tr>
+				<tr>
+					<td>學生/軍警</td>
+					<td>
+						<div id="student" class="custom-select">
+							<select>
+								<option value="0">0</option>
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+					</td>
+					<td>260</td>
+					<td id="t_student">0</td>
+				</tr>
+				<tr>
+					<td>愛心票/敬老票</td>
+					<td>
+						<div id="older" class="custom-select">
+							<select>
+								<option value="0">0</option>
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+					</td>
+					<td>260</td>
+					<td id="t_older">0</td>
+				</tr>
+				<tr>
+					<td>組合票(票+餐飲)</td>
+					<td>
+						<div id="combine" class="custom-select" >
+							<select id="combine_s">
+								<option value="0">0</option>
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+					</td>
+					<td>260</td>
+					<td id="t_combine">0</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>手續費:</td>
+					<td id="tax">$0</td>
+				</tr>
+				<tr>
+					<td>總計:</td>
+					<td id="totalprice">$0</td>
+				</tr>
+			</table >
+			<div class="button">
+				<button id="clear" class="button_type2" type="button" name="clear">重新填寫</button>
+				<button id="booking" class="button_type2" type="button" name="booktickets">訂購</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+</main>
+</div>
+<footer class="footer_bg">
+	<div class="footer">
+		<div class="footer_col ">
+			<span>FOLLOW US</span>
+			<div class="icon_img">
+			<img src="./img/icon/fb.png" alt="facebook">
+			<img src="./img/icon/ig.png" alt="instagram">
+			<img src="./img/icon/google.png" alt="google">
+			<img src="./img/icon/youtube.png" alt="youtube">
+			</div>
+		</div>
+		<div class="footer_col subscribe">
+			<span>SUBSCRIBE TO NEWSLETTER</span>
+			<input type="email" id="email" name="email" placeholder="Email Address">
+			<button class="button_type2">訂閱</button>
+		</div>
+	</div>
+	<img class="logo" src="./img/logo/logo_2.png" alt="">
+	<p class="footer_p">Copyright © 2020 桐畫劇場 all rights reserved</p>
+</footer>
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+	<div class="ticket_rule modal-content">
+		<h3>網路訂票規則</h3>
+		<div class="first_rule">每週三 18:00 開放週五至隔週四之場次，本影院保留修改權力，若有疑問歡迎來電洽詢。</div>
+		<div class="rule_t"><p>票價</p></div>
+		<div>
+			<table>
+				<tr>
+					<td>全票</td><td>290</td><td></td>
+				</tr>
+				<tr>
+					<td>學生/軍警</td><td>260</td><td>請出示相關證件</td>
+				</tr>
+				<tr>
+					<td>愛心票/敬老票</td><td>145</td><td>請出示相關證件</td>
+				</tr>
+				<tr>
+					<td>組合票(票+餐飲)</td><td>350</td><td></td>
+				</tr>
+			</table>
+		</div>
+		<div class="rule_t"><p>訂票規定</p></div>
+		<div>
+			<ol>
+				<li>同一筆訂票最多可訂6張票</li>
+				<li>網路訂票最晚須在開演前30分鐘上網訂票</li>
+				<li>請選擇正確票種，若是因為選擇錯誤或是無法出示相關證件而須更換，影院不保證相同座位</li>
+				<li>若是選擇優惠票種，取票時須出示相關證明，若是無法出示將以全票計費</li>
+				<li>每張訂票將收取20元服務費</li>
+			</ol>
+		</div>
+		<div class="rule_t"><p>取票規定</p></div>
+		<div>
+			<ol>
+				<li>必須在開演前20分鐘取票，逾時將取消訂位</li>
+				<li>請使用訂票號碼或是手機號碼取票</li>
+			</ol>
+		</div>
+		<div class="rule_t"><p>退換票規定</p></div>
+		<div>
+			<ol>
+				<li>若要取消訂票可在開演前30分鐘，於售票網頁自行辦理</li>
+				<li>若取票後需要退票，必須在開演前20分鐘至影城櫃檯辦理</li>
+				<li>退換票時請持原電影票辦理，電影票遺失恕不補發，亦無法辦理退換票</li>
+				<li>退票時將不會退回訂票服務費</li>
+			</ol>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		//check movie title
+		$(".m_focus").click(function(){
+			$(".m_focus").css('background-color','#f6f6f6');
+			$(this).css('background-color','lightgrey');
+			$('#m_title').text($(this).text());
+	 	})
+		//check movie date
+	let accItem = $('.accordionItem');
+  let accHD = $('.accordionItemHeading');
+  for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+  }
+  function toggleItem() {
+    let itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+      accItem[i].className = 'accordionItem closed';
+    }
+    if (itemClass == 'accordionItem closed') {
+      this.parentNode.className = 'accordionItem open';
+			$('#m_day').text($(this).text());
+			$(".accordionItemHeading").css('background-color','#f6f6f6');
+			$(this).css('background-color','lightgrey');
+
+      }
+  }
+
+	//check movie time
+	$(".time_cell").click(function(){
+		$('#m_time').text($(this).text());
+		$(".time_cell").css('background-color','#f6f6f6');
+		$(this).css('background-color','lightgrey');
+	});
+	
+	// Get the modal
+	let modal = document.getElementById("myModal");
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	let open_modal = document.getElementById("open_modal");
+	open_modal.onclick = function(){
+  	modal.style.display = "block";
+	}
+	// Get the <span> element that closes the modal
+	let span = document.getElementsByClassName("close")[0];
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() { 
+  	modal.style.display = "none";
+	}
+
+	//calculate tickets
+	let a_t = 0, s_t = 0, o_t = 0, c_t = 0; 
+	let a_t_p = 0, s_t_p = 0, o_t_p = 0, c_t_p = 0;
+	let total_q = 0 ;
+		$('#adult').click(function() {
+			a_t = parseInt($("#adult .same-as-selected").text());
+			a_t_p = $("#adult .same-as-selected").text()*290;
+			$('#t_adult').text(a_t_p);
+			calculateT(a_t,a_t_p);		
+		});
+		$('#student').click(function() {
+			s_t = parseInt($("#student .same-as-selected").text());
+			s_t_p = $("#student .same-as-selected").text()*260;
+			$('#t_student').text(s_t_p);
+			calculateT(s_t,s_t_p);
+		});
+		$('#older').click(function() {
+			o_t = parseInt($("#older .same-as-selected").text());
+			o_t_p = $("#older .same-as-selected").text()*290;
+			$('#t_older').text(	o_t_p );
+			calculateT(o_t,o_t_p);
+		});
+		$('#combine').click(function() {
+			c_t = parseInt($("#combine .same-as-selected").text());
+			c_t_p = $("#combine .same-as-selected").text()*290;
+			$('#t_combine').text( c_t_p );
+			calculateT(c_t, c_t_p);
+		});
+		function calculateT(q,p) {
+			total_q = a_t + s_t + o_t + c_t ;
+			let tax = total_q * 10; 
+			let total_p = a_t_p + s_t_p + o_t_p + c_t_p + tax; 
+			$("#tax").text(tax);
+			$("#totalprice").text(total_p);
+		}
+		$('#booking').click( function(){
+			if(total_q > 6){
+				alert("超過購買數量囉！")
+			}else if(total_q = 0){
+				alert("請輸入訂購張數");
+			}else{
+				alert("訂購成功！")
+			}
+		});
+		$('#clear').click( function(){
+			// alert(total_q);
+			if(total_q == 0 ){
+				alert("沒有資料可以清空唷！");		
+			}else{				
+				// alert($("#combine_s").val())
+				// $('.select-selected').prop('selectedIndex',0);
+				alert("要清但還沒清ＸＤ");
+			}			
+		});
+
+	})
+</script>
+
+</body>
+</html>
